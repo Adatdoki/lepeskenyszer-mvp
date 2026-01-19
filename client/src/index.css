@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Noir Detective Palette */
+    --background: 0 0% 95%; /* Papír fehér */
+    --foreground: 0 0% 10%; /* Tinta fekete */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 10%; /* Fekete */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 90%; /* Szürke */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 100% 27%; /* Vérvörös #8a0000 */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 0 0% 10%;
+
+    --radius: 0.2rem; /* Szögletesebb, papírszerű */
+  }
+
+  .dark {
+    --background: 0 0% 5%; /* Sötét szoba */
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 90%;
+
+    --destructive: 0 100% 40%; /* Világosabb vörös */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png"); /* Papír textúra */
+  }
+}
+
+/* Egyedi stílusok */
+.font-typewriter {
+  font-family: 'Special Elite', monospace;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.paper-shadow {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.stamp {
+  mask-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+  transform: rotate(-5deg);
+}
+
+.font-readable {
+  font-family: 'Courier Prime', monospace;
+}
